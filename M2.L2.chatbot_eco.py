@@ -12,6 +12,16 @@ async def on_ready():
     print(f"¡{ecoh.user} está en línea!")
 
 @ecoh.command()
+async def info(ctx):
+    lista_comandos = ["*descompose* sirve para conocer el tiempo de descomposición de un objeto",
+                      "*recycle* sirve para saber si el objeto se puede reciclar o no",
+                      "*consejo* te daré un consejo que te puede ayudar a que tu día sea más ecológico (solo coloca =consejo)"]
+    
+    await ctx.send("¡Hola! 👋 soy Ecoh, para activar una de mis funciones coloca = y el nombre del comando junto al objeto sobre el que se va a aplicar el comando")
+    await ctx.send("A continuación te voy a mostrar los comandos que utilizo:")
+    await ctx.send(lista_comandos)
+
+@ecoh.command()
 async def descompose(ctx,*,objeto:str):
     listaDescomposition = {
         "botella de plástico": 500,
@@ -64,4 +74,3 @@ async def consejo(ctx):
     
     consejo = random.choice(lista_consejos)
     await ctx.send(f"{consejo}")
-    
