@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Calculadora energética</title>
+</head>
+<body>
+    {%block content%}
+    <form action="" class="form"><br><br>
+        <div class="user">
+            <br><br>
+            <h1>¡Gracias por llenar el formulario!</h1>
+            <ul class="user-info">
+                <li class="user-info__item">
+                    <label for="name">Nombre: {{name}}</label>
+                </li>
+                <li class="user-info__item">
+                    <label for="email">Email: {{email}}</label>
+                </li>
+                <li class="user-info__item">
+                    <label for="address">Dirección: {{address}}</label>
+                </li>
+                <li class="user-info__item">
+                    <label for="date">Fecha: {{date}}</label>
+                </li>
+            </ul>
+        </div>
+    </form>
+    {%endblock%}
+</body>
+</html>
